@@ -14,5 +14,7 @@
 + When user puts wrong credentials into login  form - then is displayed warning board and message that user or password is wrong.
 
 ## Print screens
-
+### Login form
 ![login view](/simple-login/print-screen/login.png)
+### Login form - wrong credentials
+![login view](/simple-login/print-screen/login-wrong-credentials.png)
