@@ -16,5 +16,9 @@
 ## Print screens
 ### Login form
 ![login view](/simple-login/print-screen/login.png)
-### Login form - wrong credentials
+### Login form - wrong credentials (username, password)
+![login view](/simple-login/print-screen/login-wrong-credentials.png)
+### Secured end point - /Customer - user logged in
+![login view](/simple-login/print-screen/login-succeed.png)
+### Public end point - /home - user not logged in
 ![login view](/simple-login/print-screen/login-wrong-credentials.png)
