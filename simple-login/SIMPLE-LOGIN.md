@@ -4,7 +4,7 @@
 + User fetch from database (Oracle) 
 + Password is encrypted
 + Secure endpoint: **customer**
-+ Public endpoints: **, home, login**
++ Public endpoints: **/, /home, /login**
 + Template engine: Thymeleaf
 
 ## Application functionality
