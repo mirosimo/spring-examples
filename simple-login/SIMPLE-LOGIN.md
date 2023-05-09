@@ -3,7 +3,7 @@
 ## Basic characteristic
 + User fetch from database (Oracle) 
 + Password is encrypted
-+ Secure endpoint: **customer**
++ Secure endpoint: **/customer**
 + Public endpoints: **/, /home, /login**
 + Template engine: Thymeleaf
 
