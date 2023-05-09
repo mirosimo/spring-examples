@@ -15,4 +15,4 @@
 
 ## Print screens
 
-![login view](/print-screen/login.png)
+![login view](/simple-login/print-screen/login.png)
