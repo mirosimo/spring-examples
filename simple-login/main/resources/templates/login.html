@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!----------------------->
+<!-- View - LOGIN PAGE -->
+<!----------------------->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset = "UTF-8" />
+      <link type="text/css" th:href = "@{/css/app_style.css}" rel = "stylesheet"/>
+      <title>Login Example</title>
+   </head>
+   <body>
+   		<div class="application-wrapper">   
+   			<div class= "middle-part"> 
+		   		<div class="content-part">	
+		   			<div class="title-part" >		
+						<h1>Login Page</h1>
+					</div>						   				
+					<div th:if="${param.error}">
+    					<!-- Fragment - Warning board -->
+		   				<div th:replace="fragments/login_warning_board.html :: login_warning_board"></div>
+					</div>
+		   			<form action="#" th:action="@{/mirosimo-login}" method="POST" >		   						   						   						   						
+		   				<div class="grid-container-base grid-container-two-col">            
+			            	<label>User name</label>
+			   				<input class="text-input-box" type="text" id="username" name="usname" size="18" >
+			   					
+			   				<label>Password</label>
+			   				<input class="text-input-box" type="text" id="password" name="passwd" size="18" >		   							   						   						   				
+			   			</div> 
+			   			<div class="button-part">  				   				   				   				
+			   				<button class="confirm-button" type="submit">Login </button>
+			   			</div>
+		   				
+		   			</form>
+		   		</div>	<!-- End content-part -->
+   		</div> <!--  End of middle part -->
+   		<div class="footer-part">
+   		</div>  	
+   </div> <!-- End of application-wrapper -->	   		
+   </body>
+</html>

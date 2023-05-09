@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-------------------------->
+<!-- View - CUSTOMER PAGE -->
+<!-------------------------->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset = "UTF-8" />
+      <link type="text/css" th:href = "@{/css/app_style.css}" rel = "stylesheet"/>
+      <title>Login Example - Customer Page</title>
+   </head>
+   <body>
+   		<div class="application-wrapper">   			   
+   			<div class= "middle-part"> 
+   				<!-- In fragment info-strip is placed user info, logout button -->
+   				<div class="strip-part" th:include="fragments/info-strip.html :: info-strip"></div>
+   				   				
+		   		<div class="content-part">	
+		   			<div class="title-part" >		
+						<h1>Customer page</h1>
+					</div>						   			
+		   		</div>	<!-- End content-part -->
+   		</div> <!--  End of middle part -->
+   		<div class="footer-part">
+   		</div>  	
+   </div> <!-- End of application-wrapper -->	   		
+   </body>
+</html>
