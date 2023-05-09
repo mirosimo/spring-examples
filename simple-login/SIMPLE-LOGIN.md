@@ -21,4 +21,4 @@
 ### Secured end point - /Customer - user logged in
 ![login view](/simple-login/print-screen/login-succeed.png)
 ### Public end point - /home - user not logged in
-![login view](/simple-login/print-screen/login-wrong-credentials.png)
+![login view](/simple-login/print-screen/logout-home.png)
