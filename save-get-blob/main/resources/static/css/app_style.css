@@ -1,0 +1,167 @@
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	text-align: center;
+	background: #585858;
+}
+
+img {
+	display: block;
+}
+
+.application-wrapper {
+	width: 1200px;
+	margin-top: 20px;
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 1200px;	
+}
+
+.middle-part {
+	/*background: rgba(204, 163, 0, 1);*/	
+	min-height: 100vh;
+}
+
+.content-part {	
+	display: inline-block;
+	text-align: center;
+	/*border: 2px solid green;*/
+	width: 1050px;
+	/*background: #b30000; #800000*/
+	
+	background: #007399;
+	margin-top: 30px;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 75px;
+}
+
+
+.title-part {
+	display: inline-block;
+	width: 100%;
+	text-align: center;	
+    font-size: 16px;
+    text-decoration: underline;
+    color:	#989898;
+}
+
+.button-part {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+
+.confirm-button {
+  /*background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);*/
+  background-image: linear-gradient(-180deg, #009933 0%, #006622 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 8px 15px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.confirm-button:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+.main-part > form {    
+    position: relative;
+}
+
+/*  Base properties for
+	Grids used by views for adding, updating entities, records  */
+.grid-container-base {
+	display: inline-grid;
+    border: 2px solid #989898;
+    row-gap: 15px;
+    padding: 22px 18px;	
+    justify-content: center;
+    justify-items: start;
+    align-items: center;
+}
+
+/* Grid - two column grid
+	LABEL - INPUT
+*/
+.grid-container-two-col {
+    grid-template-columns: auto auto;                                    
+}
+
+/* Grid - three column grid 
+	Grid for views with such a shape: 	
+	LABEL - INPUT - ALLERT MESSAGE (input validation)
+*/
+.grid-container-three-col {
+    grid-template-columns: auto auto auto;                            
+}
+
+
+
+.grid-container-two-col label, .grid-container-three-col label, .cars-grid span {
+    color: white;
+    align-self: center;
+    font-size: 14px;
+}
+
+/* Properties of inputs and selects in grid*/
+.grid-container-two-col input, .grid-container-three-col input, .grid-container-five-col input,
+	.grid-container-two-col select, .grid-container-three-col select, .grid-container-five-col select
+ {
+    margin-left: 10px;
+    font-size: 14px;
+  	padding-top: 2px;
+  	padding-bottom: 2px;
+}
+
+
+/* Img Grid */
+
+.cars-grid {
+	display: inline-grid;
+    border: 2px solid #989898;
+    grid-template-columns: auto auto auto auto;                            
+    row-gap: 30px;
+    column-gap: 20px;
+    padding: 22px 18px;	
+    justify-content: center;
+    justify-items: start;
+}
+
+    
+.cars-grid description {
+	display: block;
+}
+
+.car-grid-cell-sub-grid {
+	display: grid;
+	row-gap: 10px;
+  	grid-template-rows: 1fr;
+  	grid-template-columns: 1fr;
+  	/*border: 1px solid #99ccff;*/
+}
+
+.car-grid-cell-sub-grid img {
+	max-width: 190px;	
+	align-self: center;  /* Vertical Center alignment in GRID cells - so simple with grid... */	
+}
+
+
+
+
+
+
+
+
+
