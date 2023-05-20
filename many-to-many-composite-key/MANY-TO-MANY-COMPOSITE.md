@@ -14,12 +14,13 @@ two is **CarEquipmentPackCarEngine** - contains composite primary key **CarEquip
 
 # Thymeleaf views
 
++ **car-equipment-pack-engine-list.html** - view displayes equipment packs which are in active states. And under each equipment pack are
+             displayed its available engines.
 + **car-engine-new.html** - view for adding new engine into system.
 + **car-engine-list.html** - view displays list of all engines
 + **car-equipment-pack-new.html** - view for adding new equipment pack into system.
 + **car-equipment-pack-list.html** - view displays list of all equipment packs
-+ **car-equipment-pack-engine-list.html** - view displayes equipment packs which are in active states. And under each equipment pack are
-             displayed its available engines.
+
 
 # Screenshots
 
