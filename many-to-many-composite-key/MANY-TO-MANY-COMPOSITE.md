@@ -23,7 +23,16 @@ two is **CarEquipmentPackCarEngine** - contains composite primary key **CarEquip
 
 
 # Screenshots
+## Equipment pack - Engines 
+![login view](/many-to-many-composite-key/screen-shots/eq-pack-engines-list.png)
 
+## Equipment pack - List
+![login view](/many-to-many-composite-key/screen-shots/eq-pack-list.png)
 
+## Equipment pack - NEW record
+![login view](/many-to-many-composite-key/screen-shots/eq-pack-new.png)
+
+## Engines - List
+![login view](/many-to-many-composite-key/screen-shots/engine-list.png)
 
   
