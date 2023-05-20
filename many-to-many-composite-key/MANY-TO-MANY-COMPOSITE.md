@@ -6,5 +6,12 @@ ordering entities by multiple fields and maybee something more.
 
 # CarEquipmentPack - CarEngine
   For our purpose are applied two entities **CarEquipmentPack** and **CarEngine**. Each equipment pack (Style, Ambition, Sportline, etc...) could has
-one or more available engines (1.8 Tsi, 1.4 Mpi, 2.0 Tdi, etc). And each engine could be available in one or more equipment packs.
+one or more available engines (1.8 Tsi, 1.4 Mpi, 2.0 Tdi, etc). And each engine could be available in one or more equipment packs. Connection entity between theese 
+two is **CarEquipmentPackCarEngine** - contains composite primary key **CarEquipmentPackCarEngineId** and extra columns
++ added - date, when was particular engine assigned to particular equipment pack.
++ active - could be in active state or not. (Production problems, or engine could become obsolete and therfore removed from offer)
++ marketingCarVariantName
+
+
+
   
