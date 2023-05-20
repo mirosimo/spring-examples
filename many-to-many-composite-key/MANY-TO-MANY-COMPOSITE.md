@@ -12,6 +12,14 @@ two is **CarEquipmentPackCarEngine** - contains composite primary key **CarEquip
 + **active** - could be in active state or not. (Production problems, or engine could become obsolete and therfore removed from offer)
 + **marketingCarVariantName**
 
+# Thymeleaf views
+
++ car-engine-new.html
++ car-engine-list.html
++ car-equipment-pack-new.html
++ car-equipment-pack-list.html
++ car-equipment-pack-engine-list.html
+
 # Screenshots
 
 
