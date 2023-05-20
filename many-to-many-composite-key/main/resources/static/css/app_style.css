@@ -1,0 +1,303 @@
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	text-align: center;
+	background: #585858;
+}
+
+img {
+	display: block;
+}
+
+.application-wrapper {
+	width: 1000px;
+	margin-top: 20px;
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 900px;	
+}
+
+
+
+.strip-part {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;	
+	background: #f8f8f8;
+}
+
+/* All child elememts in first level of top-part element */
+.strip-part > * {	
+	flex-grow: 0;
+    flex-shrink: 1; 
+}
+
+.middle-part {
+	/*background: rgba(25, 102, 25, 0.5);*/	
+	min-height: 100vh;
+}
+
+.content-part {	
+	display: inline-block;
+	text-align: center;
+	/*border: 2px solid green;*/
+	width: 900px;	
+	background: #007399;
+	margin-top: 30px;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 75px;
+}
+
+
+.title-part {
+	display: inline-block;
+	width: 100%;
+	text-align: center;	
+    font-size: 16px;
+    text-decoration: underline;
+    color:	#989898;
+}
+
+.button-part {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+
+.confirm-button {
+  background-image: linear-gradient(-180deg, #009933 0%, #006622 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 8px 15px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.confirm-button:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+.main-part > form {    
+    position: relative;
+}
+
+/*  Base properties for
+	Grids used by views for adding, updating entities, records  */
+.grid-container-base {
+	display: inline-grid;
+    border: 2px solid #989898;
+    row-gap: 15px;
+    padding: 22px 18px;	
+    justify-content: center;
+    justify-items: start;
+    align-items: center;
+}
+
+/* Grid - two column grid*/
+.grid-container-two-col {
+    grid-template-columns: auto auto;                                    
+}
+
+/* Grid - three column grid 
+	Grid for views with such a shape: 	
+	LABEL - INPUT - ALLERT MESSAGE (input validation)
+*/
+.grid-container-three-col {
+    grid-template-columns: auto auto auto;                            
+}
+
+/* Grid - five columns - the middle is sepparate column 
+	Grid for views with such a shape: 
+	LABEL - INPUT - SEPARATE COLUMN - LABEL - INPUT 
+*/
+.grid-container-five-col {
+    grid-template-columns: auto auto 60px auto auto;                            
+}
+
+
+.grid-container-two-col label, .grid-container-three-col label, .grid-container-five-col label, .cars-grid span {
+    color: white;
+    align-self: center;
+    font-size: 14px;
+}
+
+/* Properties of inputs and selects in grid*/
+.grid-container-two-col input, .grid-container-three-col input, .grid-container-five-col input,
+	.grid-container-two-col select, .grid-container-three-col select, .grid-container-five-col select
+ {
+    margin-left: 10px;
+    font-size: 14px;
+  	padding-top: 2px;
+  	padding-bottom: 2px;
+}
+
+
+
+/* Spanning over 4 columns in grid. 
+	e.g. used in employee detail for displaying big complete employee name */
+.grid-col-span-4 {
+	grid-column: span 4;
+}
+
+.grid-col-span-2 {
+	grid-column: span 2;
+}
+
+.grid-center-cell {
+	justify-content: center;
+  	align-items: center;
+}
+
+/* End of setup grid */
+
+.form-title {
+    font-size: 20px;
+    color: #ff9980;
+    margin-bottom: 38px;
+}
+
+.logout-button {
+	margin: 4px 6px;
+	/*margin-left: 4px;*/
+	background-image: linear-gradient(-180deg, #663300 0%, #4d2600 100%); 
+}
+
+.user-info {
+	font-size: 16px;	
+}
+
+.user-info span:nth-child(2) {
+	font-weight: bold;
+	margin-right: 3px;
+}
+
+.login-warning-board {
+	display:inline-flex;	
+	background: #606060; 
+	justify-content: center;
+	align-items: center;
+	padding: 7px 40px;
+	margin-top: 20px;	
+	margin-bottom: 70px;	
+	border-radius: 5px;
+	border: 4px solid #F8F8F8;
+}
+
+.login-warning-board img {
+	max-width: 35px;
+
+}
+
+.login-warning-board h1 {	
+	color: #ffff66;	
+	font-size: 20px;
+	margin-left: 20px;	
+}
+
+
+/* Views with data in table form*/
+.table-part table {	
+    display: inline-block;
+	border: 2px solid #606060;   
+    border-collapse: collapse;
+    color: 	#D0D0D0;    
+}
+
+.table-part tr[data-href] {
+	cursor: pointer;
+}
+
+/* Head of the table */
+.table-part tr.row_head {
+    background: #264d00;
+    border-bottom: 2px solid #606060;
+}
+
+.table-part .row_head th {
+    border-right: 1px solid #606060;
+    font-size: 20px;    
+    color: #E0E0E0;
+    padding: 4px 8px;
+    
+}
+
+.table-part .row_head th:last-child {
+    border-right: 0px;
+}
+
+
+/* Body of the table */
+
+/* Background Color of odd row */
+.table-part .row_body:nth-child(odd) {    
+    background: #002b80;
+}
+
+/* Background Color of even row */
+.table-part .row_body:nth-child(even) {    
+    background: #802b00;
+}
+
+.table-part .row_body {
+    border-bottom: 1px solid #606060;
+}
+
+.table-part .row_body:last-child {
+    border-bottom: 0px;
+}
+
+.table-part .row_body td {
+    font-size: 16px;    
+    text-align: left;
+    border-right: 1px solid #606060;    
+    padding: 4px 6px;
+    
+}
+
+.table-part .row_body td:last-child {
+    border-right: 0px;
+}
+
+/* For centering update, delete icons in table with data */
+.table-part .delete-column a, .table-part .update-column a {
+	display: block;
+ 	width: 16px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+ 
+ .table-part .delete-column img, .table-part .update-column img {	
+ 	width: 16px;
+ }
+ 
+ .equipment-pack-engines h1 {
+	/*color: #F0F0F0;*/
+	text-decoration: underline; 
+	color: #F8F8F8;
+	margin-bottom: 50px;
+ }
+
+ .equipment-pack-engines h2 {
+ 	display: inline-block;
+ 	font-size: 20px;
+ 	font-weight: bold;
+ 	margin-bottom: 4px;
+ 	color: #cc5200;
+ 	background: #E8E8E8;
+ 	padding: 2px 8px;
+ 	border: 2px solid #696969;
+ }
+ 
+ 

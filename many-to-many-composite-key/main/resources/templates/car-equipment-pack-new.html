@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!---------------------------------------------------->
+<!-- View for adding new Equipment pack into system -->
+<!----------------------------------------------------> 
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset = "UTF-8" />
+      <link th:href = "@{/css/app_style.css}" rel = "stylesheet"/>
+      <link type="text/css" th:href="@{/css/top_navbar.css}" rel="stylesheet"/>
+      <title>Add new Equipment Pack</title>
+   </head>
+   <body>
+   		<div class="application-wrapper">
+   			<div class= "middle-part">  
+		   		<div class="content-part">
+		   			<div class="title-part" >		
+						<h1>Add new Equipment Pack</h1>
+					</div>
+	   				
+		   			<form action="#" th:action="@{/car-equipment-pack-save}" th:object="${carEquipmentPack}" method="POST" 
+		   					enctype="multipart/form-data">
+		   						   					
+		   				<div class="grid-container-base grid-container-two-col">							            
+			            	<label>Name</label>
+			   				<input class="data-column" type="text" size="18"th:field="*{name}">
+			   				
+			   				<label>URL name</label>
+			   				<input class="data-column" type="text" size="18"th:field="*{urlName}">			   					
+			   				
+			   				<label>Description short</label>
+			   				<input class="data-column" type="text" size="25" th:field="*{descShort}">			   				
+			   				
+			   				<label>Description Long</label>
+			   				<input class="data-column" type="text" size="25" th:field="*{descLong}">
+			   							   							   				
+							<!-- Assign engines available in equipments pack -->
+							<label>Available engines</label>
+			   				<!-- Here is a list of all Engines available for Car Brand 
+			   					 Form this engines user choose which of them assign to particular equipment pack.  
+			   					-->		
+			   				
+			   				<div class="engine-checkboxes">
+				   				<th:block th:each="engine : ${listCarEngines}">
+				   				<div>
+	                				<input type="checkbox" name="engine_checkbox" th:value="${engine.id}"/>
+	                				<label th:text="${engine.name}"></label>
+	                			</div>                 				
+	               				</th:block>
+			   				</div>	   				   						   				
+			   			</div>
+			   			<div class="button-part">   				   				   				   				
+		   					<button class="confirm-button" type="submit">Save</button>
+		   				</div>
+		   			</form>
+	      		</div>  <!-- End content-part -->     		
+   		</div> <!--  End of middle part -->   		 
+	   	<div class="footer-part">
+	   	</div>
+	  </div> <!-- End of application-wrapper -->   		
+   </body>
+</html>
