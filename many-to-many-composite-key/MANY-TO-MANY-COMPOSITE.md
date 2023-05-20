@@ -1,6 +1,10 @@
 # Overview
-This example is focused on Jpa **many to many** relationship with extra columns (fields) in connection table (entity). Is used manner 
+  This example is focused on Jpa **many to many** relationship with extra columns (fields) in connection table (entity). Is used manner 
 with **composite key** which is created by class **model.CarEquipmentPackCarEngineId**. Extra fields in connection table have sense 
-just for **one particular combination** in relation many to many. 
+just for **one particular combination** in relation many to many. In this example you can also find how use enums with Thymeleaf, Comparator for 
+ordering entities by multiple fields and maybee something more.
 
-ssss
+# CarEquipmentPack - CarEngine
+  For our purpose are applied two entities **CarEquipmentPack** and **CarEngine**. Each equipment pack (Style, Ambition, Sportline, etc...) could has
+one or more available engines (1.8 Tsi, 1.4 Mpi, 2.0 Tdi, etc). And each engine could be available in one or more equipment packs.
+  
