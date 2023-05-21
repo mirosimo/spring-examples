@@ -28,5 +28,11 @@ roles to this user. Role and authorities management could be in real systems qui
 
 # Screenshots
 ## View - Add new user
+![login view](/user-role/screenshots/user-new2.png)
 
 ## View - List of all users
+![login view](/user-role/screenshots/user-list2.png)
+
+
+## View - List of users and roles assigned to them
+![login view](/user-role/screenshots/user-role-list.png)
