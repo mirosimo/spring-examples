@@ -5,7 +5,7 @@
 + Template Engine - **Thymeleaf**
 
 # Description
-In this example are created entities **User** and **Role**. Relationship is M : N. Connection entity between these two is **UserRole**
+In this example are created entities **User** and **Role**. Relationship is M : N. Connection entity between theese two is **UserRole**
 It contains composite primary key consist of User and Role. And than following extra fields:
 + boolean **active** 		- Is role for user Active or Not 
 + Date **dateAdded**  		- Date when was role assigned to user
