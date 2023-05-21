@@ -11,7 +11,7 @@ It contains composite primary key consisted of User and Role. And than following
 + Date **dateAdded**  		- Date when was role assigned to user
 + int **whoAssignRole** 	- Who was assigned the role to user
 
-Theese extra fields have sense for one particular combination of User and Role
+Theese extra fields have sense just for one particular combination of User and Role
 
 Password of User is encrypted. Each Role or User can be in active or NOT active state.
 
