@@ -6,7 +6,7 @@
 
 # Description
 In this example are created entities **User** and **Role**. Relationship is M : N. Connection entity between theese two is **UserRole**
-It contains composite primary key consist of User and Role. And than following extra fields:
+It contains composite primary key consisted of User and Role. And than following extra fields:
 + boolean **active** 		- Is role for user Active or Not 
 + Date **dateAdded**  		- Date when was role assigned to user
 + int **whoAssignRole** 	- Who was assigned the role to user
