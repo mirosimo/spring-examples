@@ -27,3 +27,6 @@ roles to this user. Role and authorities management could be in real systems qui
 + **user-role-list.html** - View with list of users and roles assigned to them - url end point **/user-role-list**
 
 # Screenshots
+## View - Add new user
+
+## View - List of all users
