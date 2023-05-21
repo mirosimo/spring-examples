@@ -13,7 +13,10 @@ It contains composite primary key consist of User and Role. And than following e
 
 Theese extra fields have sense for one particular combination of User and Role
 
-Password of User is encrypted. First is needed add some roles to system. Than by adding new user could be assigned to this user one or 
-more roles. Role, 
+Password of User is encrypted. Each Role or User can be in active or NOT active state.
+
+# Functionality
+First is needed add some roles to system. And than add new User. In the view for adding new user you can than assign one or more
+roles to this user. 
 
 
