@@ -24,7 +24,7 @@
 		   				<div class="grid-container-base grid-container-two-col">
 		   					<label>Fuel</label>	
 		   					<select name="fuelCmb">
-			   					<option value="0">-- Zvolte druh paliva --</option>
+			   					<option value="0">-- Choose fuel type --</option>
      							<option th:each="fuelValue : ${T(mirosimo_examples.many_to_many_composite_key.enums.PropellantType).values()}" 
           							th:value="${fuelValue}" th:text="${fuelValue.getNiceValue()}"></option>
  							</select>

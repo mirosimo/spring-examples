@@ -81,7 +81,7 @@ public class CarEquipmentPack {
 					.thenComparing((CarEquipmentPackCarEngine eqEngine) -> eqEngine.getCarEngine().getName());
 											
 		List<CarEquipmentPackCarEngine> ls = carEquipmentPackCarEngines.stream().collect(Collectors.toList());
-		Collections.sort(carEquipmentPackCarEngines.stream().collect(Collectors.toList()), comparator);		
+		Collections.sort(ls, comparator);		
 		return ls;		
 	}
 
