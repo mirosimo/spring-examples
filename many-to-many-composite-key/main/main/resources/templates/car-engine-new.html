@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!------------------------------------------------>
+<!-- View for adding new Car Engine into system -->
+<!------------------------------------------------>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset = "UTF-8" />
+      <link th:href = "@{/css/app_style.css}" rel = "stylesheet"/>
+      <link type="text/css" th:href="@{/css/top_navbar.css}" rel="stylesheet"/>
+      <title>New Car Engine</title>
+   </head>
+   <body>
+   		<div class="application-wrapper">
+   			<div class= "middle-part">
+		   		<div class="content-part">		   	
+		   			<div class="title-part" >		
+						<h1>New Car Engine</h1>
+					</div>
+	   				
+		   			<form action="#" th:action="@{/car-engine-save}" th:object="${carEngine}" method="POST" 
+		   					enctype="multipart/form-data">
+		   				<div class="grid-container-base grid-container-two-col">
+		   					<label>Fuel</label>	
+		   					<select name="fuelCmb">
+			   					<option value="0">-- Choose fuel type --</option>
+     							<option th:each="fuelValue : ${T(mirosimo_examples.many_to_many_composite_key.enums.PropellantType).values()}" 
+          							th:value="${fuelValue}" th:text="${fuelValue.getNiceValue()}"></option>
+ 							</select>
+		   												   								   											            	
+			            	<label>Code</label>
+			   				<input class="data-column" type="text" size="18"th:field="${carEngine.code}">
+			   				
+			   				<label>Power</label>
+			   				<input class="data-column" type="text" size="18"th:field="${carEngine.power}">
+			   				
+			   				<label>Name</label>
+			   				<input class="data-column" type="text" size="25" th:field="${carEngine.name}">			   							   							   						   					   						   				
+			   			</div>   
+			   			<div class="button-part">				   				   				   				
+			   				<button class="confirm-button" type="submit">Save</button>
+		   				</div>   
+		   			</form>
+				</div>  <!-- End content-part -->
+   			</div> <!--  End of middle part -->
+   			<div class="footer-part">
+   			</div>  	
+   </div> <!-- End of application-wrapper -->     		
+   </body>
+</html>

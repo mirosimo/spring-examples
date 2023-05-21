@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!------------------------------------------>
+<!-- List of Equipment packs - table form -->
+<!------------------------------------------>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset = "UTF-8" />
+      <link th:href = "@{/css/app_style.css}" rel = "stylesheet"/>
+      <link type="text/css" th:href="@{/css/top_navbar.css}" rel="stylesheet"/>
+      <title>Equipment pack list</title>
+   </head>
+   <body>
+   <div class="application-wrapper">
+	   <div class= "middle-part">   
+	   		<div class="content-part">	
+	   			<div class="title-part" >		
+					<h1>Equipment pack list</h1>
+				</div>
+				<div class="table-part">			  			    	
+		      		<table cellspacing="0" cellpadding="0">
+		      			<tr class="row_head">	      				
+	      					<th>Id</th>
+	      					<th>Name</th>
+	      					<th>Url name</th>
+	      					<th>Desc</th>
+	      					<th>Active</th>
+	      					<th></th>
+	      					<th></th>
+		      			</tr>
+		      			<th:block th:each="equipmentPack : ${listEntities}" th:object="${equipmentPack}">	      			
+	      				<tr class="row_body">
+	      					<td th:text="*{id}"></td>
+	      					<td th:text="*{name}"></td>
+	      					<td th:text="*{urlName}"></td>
+	      					<td th:text="*{descShort}"></td>      					      					
+		      				<td th:if="*{active}">			      						
+			      						<img src="/img/green-check.png" alt="Active Equipment pack" width="20">
+			      					</td>
+			      					<td th:unless="*{active}">			      						
+			      						<img src="/img/delete.png" alt="NOT Active Equipment pack" width="20">
+		      				
+		      				<!-- update, delete icons -->	
+		      				<td class="update-column">
+		      					<a th:href="@{/car-equipment-pack-update/} + *{id}" >
+		      						<img src="/img/edit-icon16.png" alt="Edit" >
+		      					</a>	      						
+		      				</td>
+		      				<td class="delete-column">
+	      						<a th:href="@{/car-equipment-pack-delete/} + *{id}" >
+	      							<img src="/img/delete.png" alt="Delete" >
+	      						</a>      						
+	      					</td>				
+		      			</tr>  	
+		      			</th:block>      			
+		      		</table>
+	      		</div>
+      			<div class="button-part">      			
+	      			<a th:href="@{/car-equipment-pack-new}" 
+	      				class="confirm-button">New Record</a>
+      			</div>
+      		</div>  <!-- End content-part -->     		
+   		</div> <!--  End of middle part -->   		 
+	   	<div class="footer-part">
+	   	</div>
+	  </div> <!-- End of application-wrapper -->    	
+   </body>
+   
+</html>
