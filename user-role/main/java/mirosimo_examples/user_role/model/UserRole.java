@@ -4,11 +4,16 @@ import java.util.Date;
 
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
+import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
+
+
+
 
 /*  
  * UserRole - Particular combination of User and Role - relation M:N
@@ -57,7 +62,7 @@ public class UserRole {
 	 * Id - who was assigned the role
 	 * 
 	 */
-	private int whoAssignRole;
+	private long whoAssignRole;
 	
 	
     @EmbeddedId
@@ -103,13 +108,15 @@ public class UserRole {
 		this.dateAdded = dateAdded;
 	}
 
-	public int getWhoAssignRole() {
+	public long getWhoAssignRole() {
 		return whoAssignRole;
 	}
 
-	public void setWhoAssignRole(int whoAssignRole) {
+	public void setWhoAssignRole(long whoAssignRole) {
 		this.whoAssignRole = whoAssignRole;
 	}
+
+
  
     
 }

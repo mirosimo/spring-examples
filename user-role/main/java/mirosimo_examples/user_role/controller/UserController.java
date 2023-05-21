@@ -55,15 +55,24 @@ public class UserController {
     	// Encoding password
     	user.setPassword(passwordEncoder.encode(passw));
     	
-    	// User must be saved - because user ID is generated after added to db
-    	// Id's are automatically generated in db, not in application
+    	/*
+    	 *  User must be saved - because user ID is generated after added to db
+    	 *  Id's are automatically generated in db, not in application
+    	 *  
+    	 */    	 
     	User userSaved = this.userService.saveEntity(user);
+
+    	/*
+    	 * Getting role instance by its id. Role Id is passed from view "new user view"
+    	 */
+    	Role role = roleService.getRoleById(Long.parseLong(rolecmb));
     	
     	    	
     	/*  
-    	 * UserRole - Particular combination of User and Role - relation M:N
-    	 *           - Contains primary key UserRoleId - composite key consist of Role and User
-    	 *           - Represents connection entity -
+    	 * UserRole  	- Represents connection entity
+    	 * 				- Particular combination of User and Role - relation M:N
+    	 *           	- Contains primary key UserRoleId - composite key consist of Role and User
+    	 *           
          *    	
     	 *  Contains extra fields in connection entity 
     	 *  - this fields have sense just for one particular combination of User and Role
@@ -72,12 +81,14 @@ public class UserController {
     	 *       - int whoAssignRole 	- Who was assigned the role
     	 */ 
     	UserRole userRole = new UserRole();
+    	
+    	/* Key fields in connection entity UserRole */
     	userRole.setUser(userSaved);
-    	userRole.setActive(true);
-    	userRole.setDateAdded(new Date());
-    	// Getting role instance by its id. Role Id is passed from view "new user view"
-    	Role role = roleService.getRoleById(Long.parseLong(rolecmb));
     	userRole.setRole(role);
+    	
+    	/* Extra fields in connection entity UserRole */
+    	userRole.setActive(true);
+    	userRole.setDateAdded(new Date());    
     	userRoleService.saveEntity(userRole);
     	    	
     	return "redirect:/user-list";
