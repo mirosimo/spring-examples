@@ -35,7 +35,7 @@ public class UserController {
 	private PasswordEncoder passwordEncoder;
 	
 	
-	
+	/* Show view for adding new User into system. */
     @GetMapping("/user-new")
     public String newUser(Model model) {
     	model.addAttribute("appUser", new User());
@@ -43,6 +43,8 @@ public class UserController {
     	return "user-new";
     } 
     
+    
+    /* Saves User into database. */
     @PostMapping("/save-user")
     public String saveUser(Model model, @ModelAttribute("appUser") User user,
     		@RequestParam("password") String passw,
@@ -56,8 +58,8 @@ public class UserController {
     	User userSaved = this.userService.saveEntity(user);
     	
     	// UserRole - particular combination of User and Role - relation M:N
-    	// in UserRole is connection entity - is used composite key UserRoleId 
-    	// We could have extra columns in connection entity - extra columns which have 
+    	// UserRole represents connection entity - it contains composite key UserRoleId 
+    	// We could have extra columns in connection entity - have 
     	// sense just for one particular combination of User and Role
     	// e.g. active - is assigned role to user active just now, who assigned the role, when was the 
     	// role assigned and so on. 

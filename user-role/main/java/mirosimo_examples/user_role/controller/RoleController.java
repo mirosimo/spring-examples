@@ -26,4 +26,10 @@ public class RoleController {
     	this.roleService.saveEntity(role);    	
     	return "redirect:/role-new";
     }
+    
+    @GetMapping("/role-list")
+    public String roleList(Model model) {    	    	    	
+    	model.addAttribute("listRoles", roleService.getAllEntities());    	
+    	return "role-list";
+    }
 }

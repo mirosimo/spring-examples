@@ -39,9 +39,9 @@ public class Role {
 	
 	private String name;
 	
-	private String desc_short;
+	private String descShort;
 	
-	private String desc_long;
+	private String descLong;
 	
 	@OneToMany(mappedBy = "primaryKey.role",
             cascade = CascadeType.ALL)
@@ -104,22 +104,24 @@ public class Role {
 		this.name = name;
 	}
 	
-	public String getDesc_short() {
-		return desc_short;
-	}
 
-	public void setDesc_short(String desc_short) {
-		this.desc_short = desc_short;
-	}
-
-	public String getDesc_long() {
-		return desc_long;
-	}
-
-	public void setDesc_long(String desc_long) {
-		this.desc_long = desc_long;
-	}
 	
+	public String getDescShort() {
+		return descShort;
+	}
+
+	public void setDescShort(String descShort) {
+		this.descShort = descShort;
+	}
+
+	public String getDescLong() {
+		return descLong;
+	}
+
+	public void setDescLong(String descLong) {
+		this.descLong = descLong;
+	}
+
 	public String getRoleType() {
 		return roleType;
 	}
