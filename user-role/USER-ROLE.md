@@ -17,7 +17,7 @@ Password of User is encrypted. Each Role or User can be in active or NOT active 
 
 # Functionality
 First is needed add some roles to system. And than add new User. In the view for adding new user you can than assign one or more
-roles to this user. 
+roles to this user. Role and authorities management could be in real systems quite complicated. In this examples are used just roles. 
 
 # Application Views 
 + **role-new.html** - View for adding new Role - url end point **/role-new**
