@@ -1,5 +1,7 @@
 package mirosimo_examples.user_role.controller;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -57,15 +59,22 @@ public class UserController {
     	// Id's are automatically generated in db, not in application
     	User userSaved = this.userService.saveEntity(user);
     	
-    	// UserRole - particular combination of User and Role - relation M:N
-    	// UserRole represents connection entity - it contains composite key UserRoleId 
-    	// We could have extra columns in connection entity - have 
-    	// sense just for one particular combination of User and Role
-    	// e.g. active - is assigned role to user active just now, who assigned the role, when was the 
-    	// role assigned and so on. 
+    	    	
+    	/*  
+    	 * UserRole - Particular combination of User and Role - relation M:N
+    	 *           - Contains primary key UserRoleId - composite key consist of Role and User
+    	 *           - Represents connection entity -
+         *    	
+    	 *  Contains extra fields in connection entity 
+    	 *  - this fields have sense just for one particular combination of User and Role
+    	 *       - boolean active 		- Is role Active or Not 
+    	 *       - Date dateAdded  		- Date when was role added
+    	 *       - int whoAssignRole 	- Who was assigned the role
+    	 */ 
     	UserRole userRole = new UserRole();
     	userRole.setUser(userSaved);
-    	
+    	userRole.setActive(true);
+    	userRole.setDateAdded(new Date());
     	// Getting role instance by its id. Role Id is passed from view "new user view"
     	Role role = roleService.getRoleById(Long.parseLong(rolecmb));
     	userRole.setRole(role);

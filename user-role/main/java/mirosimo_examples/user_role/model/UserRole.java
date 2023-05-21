@@ -1,5 +1,7 @@
 package mirosimo_examples.user_role.model;
 
+import java.util.Date;
+
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
 import javax.persistence.EmbeddedId;
@@ -7,6 +9,18 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
+/*  
+ * UserRole - Particular combination of User and Role - relation M:N
+ *           - Contains primary key UserRoleId - composite key consist of Role and User
+ *           - Represents connection entity -
+ *    	
+ *  Contains extra fields in connection entity 
+ *  - this fields have sense just for one particular combination of User and Role
+ *       - boolean active 		- Is role Active or Not 
+ *       - int dateAdded  		- Date when was role added
+ *       - int whoAssignRole 	- Who was assigned the role
+ */ 
 
 @Entity
 @Table
@@ -16,11 +30,35 @@ import javax.persistence.Transient;
     @AssociationOverride(name = "primaryKey.role",
         joinColumns = @JoinColumn(name = "ROLE_ID")) })
 public class UserRole {
-	// comosite key
+	/*
+	 *  Primary key - comosite key
+	 *  
+	 */
 	private UserRoleId primaryKey = new UserRoleId();
 		
-	// additional field
-	public int activated;
+	/*
+	 *  Additional fields 
+	 *  Have sense just for one particular combination of keys 
+	 *  
+	 */
+	
+	/*
+	 * Is role active or not
+	 */
+	private boolean active;
+	
+	/* 
+	 * Date when was role added
+	 * 
+	 */
+	private Date dateAdded;
+	
+	/*
+	 * Id - who was assigned the role
+	 * 
+	 */
+	private int whoAssignRole;
+	
 	
     @EmbeddedId
     public UserRoleId getPrimaryKey() {
@@ -48,12 +86,30 @@ public class UserRole {
     public void setRole(Role role) {
         getPrimaryKey().setRole(role);
     }
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	public Date getDateAdded() {
+		return dateAdded;
+	}
+
+	public void setDateAdded(Date dateAdded) {
+		this.dateAdded = dateAdded;
+	}
+
+	public int getWhoAssignRole() {
+		return whoAssignRole;
+	}
+
+	public void setWhoAssignRole(int whoAssignRole) {
+		this.whoAssignRole = whoAssignRole;
+	}
  
-    public int getActivated() {
-        return activated;
-    }
- 
-    public void setActivated(int activated) {
-        this.activated = activated;
-    }
+    
 }
