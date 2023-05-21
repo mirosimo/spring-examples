@@ -35,10 +35,11 @@
 	      					<td th:text="*{urlName}"></td>
 	      					<td th:text="*{descShort}"></td>      					      					
 		      				<td th:if="*{active}">			      						
-			      						<img src="/img/green-check.png" alt="Active Equipment pack" width="20">
-			      					</td>
-			      					<td th:unless="*{active}">			      						
-			      						<img src="/img/delete.png" alt="NOT Active Equipment pack" width="20">
+			      				<img src="/img/green-check.png" alt="Active Equipment pack" width="20">
+			      			</td>
+			      			<td th:unless="*{active}">			      						
+			      				<img src="/img/delete.png" alt="NOT Active Equipment pack" width="20">
+		      				</td>
 		      				
 		      				<!-- update, delete icons -->	
 		      				<td class="update-column">

@@ -72,11 +72,19 @@ public class CarEquipmentPackController {
 		// Adding engines assigned to equipmant pack.
 		for (int engineId : engines) {
 			CarEngine engine = carEngineService.getEntityById(engineId); 
+			
+			/* connection entity between CarEquipmentPack and CarEngine - relation M : N */
 			CarEquipmentPackCarEngine carEquipmentPackCarEngine = new CarEquipmentPackCarEngine();
+			
+			/* Setting the keys entities */
 			carEquipmentPackCarEngine.setCarEngine(engine);		
 			carEquipmentPackCarEngine.setCarEquipmentPack(savedEquipmentPack);
+			
+			/* Setting extra fields*/
 			carEquipmentPackCarEngine.setActive(true);
 			carEquipmentPackCarEngine.setAdded(new Date());
+			
+			/* Saving */
 			carEquipmentPackCarEngineService.saveEntity(carEquipmentPackCarEngine);
 		}
 				
