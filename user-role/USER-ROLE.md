@@ -20,7 +20,10 @@ First is needed add some roles to system. And than add new User. In the view for
 roles to this user. 
 
 # Application Views 
-+ **role-new.html** - View for adding new Role - and url point **/role-new**
-+ **role-list.html** - View with list of all roles - and url point **/role-list**
++ **role-new.html** - View for adding new Role - url end point **/role-new**
++ **role-list.html** - View with list of all roles - url end point **/role-list**
++ **user-new.html** - View for adding new User - url end point **/user-new**
++ **user-list.html** - View with list of all Users - url end point **/user-list**
++ **user-role-list.html** - View with list of users and roles assigned to them - url end point **/user-role-list**
 
-
+# Screenshots
