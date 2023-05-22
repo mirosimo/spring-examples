@@ -84,7 +84,7 @@ public class CarEngine {
 	private Set<CarEquipmentPackCarEngine> carEquipmentPackCarEngines = new HashSet<>();
 	
 	/* 
-	 * Comparator - order CarEngine by 
+	 * Comparator - order CarEngine by following fields
 	 *  - propellantType (Diesel, Petrol, Electro, etc...)
 	 *  - engine group (TSI, MPI, DIESEL, etc...)
 	 *  - name (1.4 MPI, 1.8 TSI, etc...)

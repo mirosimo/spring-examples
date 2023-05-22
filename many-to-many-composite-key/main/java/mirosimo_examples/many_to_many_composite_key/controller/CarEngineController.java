@@ -31,14 +31,14 @@ public class CarEngineController {
 
 
 	/* 
-	 * View with all engines - All Engine list
+	 * View with all CarEngine entities
 	 *  
-	 * The ordering of entities is done on application level. 
+	 * The ordering of entities is done here on application level. 
 	 * Normally would probably be done on database level. 
 	 * This just an example with not a lot of data. 
 	 * 
 	 * 
-	 * Nevertheless, You can check here how to use Stream API for ordering data 
+	 * Nevertheless, You can check here how to use Stream API for sorting data 
 	 * by multiple fields - using Comparator
 	 * The required ordering of CarEngine entities is by 3 following fields 
 	 * 

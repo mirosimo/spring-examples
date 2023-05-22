@@ -49,8 +49,13 @@ public class CarEquipmentPackController {
 	@GetMapping("/car-equipment-pack-new")
 	public String newEquipmentPackView(Model model) {
 		
-
-		
+		/* 
+		 * Comparator - order CarEngine by following fielsds
+		 *  - propellantType (Diesel, Petrol, Electro, etc...)
+		 *  - engine group (TSI, MPI, DIESEL, etc...)
+		 *  - name (1.4 MPI, 1.8 TSI, etc...)
+		 *  
+		 */
 		List<CarEngine> listCarEnginesOrdered = carEngineService.getAllEntities().stream()
 						.sorted(CarEngine.getComparatorByFuelGroupName())
 						.collect(Collectors.toList());		

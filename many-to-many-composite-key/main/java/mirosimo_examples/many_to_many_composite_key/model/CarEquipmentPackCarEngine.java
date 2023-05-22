@@ -1,6 +1,7 @@
 package mirosimo_examples.many_to_many_composite_key.model;
 
 import java.util.Date;
+
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
 import javax.persistence.EmbeddedId;
@@ -16,7 +17,10 @@ import javax.persistence.Transient;
         joinColumns = @JoinColumn(name = "ENGINE_ID")) })
 public class CarEquipmentPackCarEngine {
 	
-	// Composite Key
+	/* Composite Primary Key
+	 * - consist of CarEngine entity and CarEquipmentPack entity
+	 */
+	
 	private CarEquipmentPackCarEngineId primaryKey = new CarEquipmentPackCarEngineId();
 	
 	/*
@@ -24,11 +28,11 @@ public class CarEquipmentPackCarEngine {
 	 */
 	
 	/*
-	 * Each Engine offered in Equipment pack could have some
-	 * special name, title - e.g. used by advertiesing, promotion.
+	 * Some combinations of Engine and Equipment pack could have some
+	 * special name used in advertiesing materials or for promotion purposes.
 	 * 
 	 */
-	private String marketingCarVariantName;
+	private String marketingName;
 
 	/*
 	 *  Date, when was the new engine variant added to particular equipment pack.
@@ -71,13 +75,8 @@ public class CarEquipmentPackCarEngine {
 		this.primaryKey.setCarEquipmentPack(carEquipmentPack);
 	}
 	
-	public String getMarketingCarVariantName() {
-		return marketingCarVariantName;
-	}
-	public void setMarketingCarVariantName(String marketingCarVariantName) {
-		this.marketingCarVariantName = marketingCarVariantName;
-	}
-	
+
+	/* Geters and Setters */
 	public boolean isActive() {
 		return active;
 	}
@@ -90,5 +89,11 @@ public class CarEquipmentPackCarEngine {
 	}
 	public void setAdded(Date added) {
 		this.added = added;
+	}
+	public String getMarketingName() {
+		return marketingName;
+	}
+	public void setMarketingName(String marketingName) {
+		this.marketingName = marketingName;
 	}		
 }
