@@ -4,7 +4,7 @@
 + Spring Boot - **2.7.11**
 + Template Engine - **Thymeleaf**
 
-# Description
+# Overview
   This example is focused on Jpa **many to many** relationship with extra fields in connection entity. Is used manner 
 with **composite primary key**. Extra fields in connection entity have sense 
 just for **one particular combination** in relation many to many. In this example you can also find how use enums with Thymeleaf, Comparator for 
