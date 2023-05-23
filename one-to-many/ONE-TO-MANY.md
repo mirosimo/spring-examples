@@ -14,12 +14,11 @@
 
 # Thymeleaf views
 
-+ **car-equipment-pack-engine-list.html** - view displayes equipment packs which are in active states. And under each equipment pack are
-             displayed its available engines.
-+ **department-new.html** - view for adding new engine into system.
-+ **department-list.html** - view displays list of all engines
-+ **employee-new.html** - view for adding new equipment pack into system.
-+ **employee-list.html** - view displays list of all equipment packs
++ **department-employees-list.html** - view displayes under each department list of assigned employees to this department
++ **department-new.html** - view for adding new department into system
++ **department-list.html** - view displays list of all departments
++ **employee-new.html** - view for adding new employee into system
++ **employee-list.html** - view displays list of all employees
 
 
 # Screenshots
