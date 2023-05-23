@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------->
+<!-- List of Departments and its employees - table form -->
+<!-------------------------------------------------------->
+
+<!-- Attribute *menuItem* is pass through MenuInterceptor
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset = "UTF-8" />
+      <link th:href = "@{/css/app_style.css}" rel = "stylesheet"/>
+      <title>Department - Employees list</title>
+   </head>
+   <body>
+   <div class="application-wrapper">
+	   <div class= "middle-part">
+		   <div class="content-part department-employees">	
+	   			<div class="title-part" >		
+					<h1>Department - Employees - list</h1>
+				</div>							  			    	
+				<th:block th:each="department : ${listDepartments}" th:object="${department}">
+					<h2 th:text="*{name}"></h2>		
+					<div class="table-part">	
+			      		<table cellspacing="0" cellpadding="0">
+			      			<tr class="row_head">	      				
+		      					<th>Id</th>
+		      					<th>Department Name</th>
+		      					<th>First name</th>
+		      					<th>Last name</th>
+		      					<th>Email</th>
+		      					<th>Birthdate</th>
+			      			</tr>
+			      			<th:block th:each="employee : ${department.getEmployeeSet()}">	      			
+		      				<tr class="row_body">
+		      					<td th:text="${department.id}"></td>
+		      					<td th:text="${department.name}"></td>
+		      					<td th:text="${employee.firstName}"></td>
+		      					<td th:text="${employee.lastName}"></td>
+		      					<td th:text="${employee.email}"></td>
+		      					<td th:text="${#dates.format(employee.birthDate,  'dd-MM-yyyy')}"></td>      					      					
+			      			</tr>  	
+			      			</th:block>      			
+			      		</table>
+			    </div>	
+		      	</th:block>	      		
+      		</div>  <!-- End content-part -->   		
+     	</div> <!--  End of middle part -->
+	   	<div class="footer-part">
+   		</div>     		
+   	</div> <!-- End of application-wrapper -->      	
+   </body>
+   
+</html>
