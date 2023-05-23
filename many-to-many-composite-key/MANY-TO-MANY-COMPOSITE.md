@@ -30,7 +30,7 @@ two is **CarEquipmentPackCarEngine** - contains composite primary key **CarEquip
 
 # Screenshots
 ## Equipment pack - Engines 
-![login view](/many-to-many-composite-key/screen-shots/eq-pack-engines-list2.png)
+![login view](/many-to-many-composite-key/screen-shots/eq-pack-engines-list3.png)
 
 ## Equipment pack - List
 ![login view](/many-to-many-composite-key/screen-shots/eq-pack-list.png)
