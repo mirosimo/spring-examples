@@ -22,14 +22,14 @@
 
 
 # Screenshots
-## Equipment pack - Engines 
-![login view](/many-to-many-composite-key/screen-shots/eq-pack-engines-list2.png)
+## Department - Employees 
+![department-employees](/one-to-many/screenshots/department-employees.png)
 
-## Equipment pack - List
-![login view](/many-to-many-composite-key/screen-shots/eq-pack-list.png)
+## Employee new
+![employee new](/one-to-many/screenshots/employee-new.png)
 
-## Equipment pack - NEW record
-![login view](/many-to-many-composite-key/screen-shots/eq-pack-new.png)
+## Employee list
+![employee list](/one-to-many/screenshots/employee-list.png)
 
-## Engines - List
-![login view](/many-to-many-composite-key/screen-shots/engine-list.png)
+## Department list
+![department list](/one-to-many/screenshots/department-list.png)
