@@ -1,5 +1,6 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
+### Java ###
+# Compiled class file
+*.class
 
 ### STS ###
 .apt_generated
@@ -9,9 +10,6 @@
 .settings
 .springBeans
 .sts4-cache
-
-
-# Created by https://www.gitignore.io/api/git,java,maven,eclipse,windows
 
 ### Eclipse ###
 
@@ -36,15 +34,6 @@ local.properties
 # PyDev specific (Python IDE for Eclipse)
 *.pydevproject
 
-# CDT-specific (C/C++ Development Tooling)
-.cproject
-
-# CDT- autotools
-.autotools
-
-# Java annotation processor (APT)
-.factorypath
-
 # PDT-specific (PHP Development Tools)
 .buildpath
 
@@ -65,11 +54,6 @@ local.properties
 
 # Annotation Processing
 .apt_generated/
-
-# Scala IDE specific (Scala & Java development for Eclipse)
-.cache-main
-.scala_dependencies
-.worksheet
 
 ### Eclipse Patch ###
 # Eclipse Core
@@ -97,10 +81,6 @@ local.properties
 *_BASE_*.txt
 *_LOCAL_*.txt
 *_REMOTE_*.txt
-
-### Java ###
-# Compiled class file
-*.class
 
 # Log file
 *.log
