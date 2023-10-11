@@ -18,9 +18,15 @@ import mirosimo.examples.propertieex.AppSetupProperties3;
 public class AppSetupController {
 	@Autowired
 	private ApplicationContext applicationContext;
+
+	@Autowired
+	private AppSetupProperties appSetupProperties;
 	
 	@Autowired
-	private AppSetupProperties3 appSetup;
+	private AppSetupProperties2 appSetupProperties2;
+	
+	@Autowired
+	private AppSetupProperties3 appSetupProperties3;
 	
 	/* 
 	 * End point for getting injecting values from application.properties
@@ -28,13 +34,14 @@ public class AppSetupController {
 	 * 
 	 * */
 	@GetMapping("/get-app-info")
-	public String getAppInfo() {
+	public String getAppInfo() {		
+		//AppSetupProperties appSetup = applicationContext.getBean(AppSetupProperties.class);
 		
-		AppSetupProperties appSetup = applicationContext.getBean(AppSetupProperties.class);
-        System.out.println("Application name: "+appSetup.getName());
-        System.out.println("Color variant: "+appSetup.getColorVariant());        
-        new ArrayList<String>(Arrays.asList(appSetup.getBackupTimes())).stream().forEach(p -> System.out.println("Zaloha:" + p));        
-		return appSetup.getName();
+		System.out.println("Properties source: "+appSetupProperties.getSource());
+        System.out.println("Application name: "+appSetupProperties.getName());
+        System.out.println("Color variant: "+appSetupProperties.getColorVariant());        
+        new ArrayList<String>(Arrays.asList(appSetupProperties.getBackupTimes())).stream().forEach(p -> System.out.println("Zaloha:" + p));        
+		return appSetupProperties.getName();
 	}
 	
 	
@@ -44,15 +51,12 @@ public class AppSetupController {
 	 * 
 	 * */
 	@GetMapping("/get-app-info2")
-	public String getAppInfo2() {
-		
-		AppSetupProperties2 appSetup = applicationContext.getBean(AppSetupProperties2.class);
-		
-		System.out.println("Properties source: "+appSetup.getSource());
-        System.out.println("Application name: "+appSetup.getName());
-        System.out.println("Color variant: "+appSetup.getColorVariant());
-        new ArrayList<String>(Arrays.asList(appSetup.getBackupTimes())).stream().forEach(p -> System.out.println("Zaloha:" + p));
-		return appSetup.getName();
+	public String getAppInfo2() {				
+		System.out.println("Properties source: "+appSetupProperties2.getSource());
+        System.out.println("Application name: "+appSetupProperties2.getName());
+        System.out.println("Color variant: "+appSetupProperties2.getColorVariant());
+        new ArrayList<String>(Arrays.asList(appSetupProperties2.getBackupTimes())).stream().forEach(p -> System.out.println("Zaloha:" + p));
+		return appSetupProperties2.getName();
 	}
 	
 	
@@ -64,14 +68,14 @@ public class AppSetupController {
 	@GetMapping("/get-app-info3")
 	public String getAppInfo3() {		
 		
-		System.out.println("Properties source: "+appSetup.getSource());
-        System.out.println("Application name: "+appSetup.getName());
-        System.out.println("Color variant: "+appSetup.getColorVariant());
-        new ArrayList<String>(Arrays.asList(appSetup.getBackupTimes())).stream().forEach(p -> System.out.println("Zaloha:" + p));
-        System.out.println("Bottom part background: "+appSetup.getBottomPart().getBackgroundColor());
-        System.out.println("Bottom part design: "+appSetup.getBottomPart().getDesign());
-        System.out.println("Bottom part orientation: "+appSetup.getBottomPart().getOrientation());
+		System.out.println("Properties source: "+appSetupProperties3.getSource());
+        System.out.println("Application name: "+appSetupProperties3.getName());
+        System.out.println("Color variant: "+appSetupProperties3.getColorVariant());
+        new ArrayList<String>(Arrays.asList(appSetupProperties3.getBackupTimes())).stream().forEach(p -> System.out.println("Zaloha:" + p));
+        System.out.println("Bottom part background: "+appSetupProperties3.getBottomPart().getBackgroundColor());
+        System.out.println("Bottom part design: "+appSetupProperties3.getBottomPart().getDesign());
+        System.out.println("Bottom part orientation: "+appSetupProperties3.getBottomPart().getOrientation());
         
-		return appSetup.getName();
+		return appSetupProperties3.getName();
 	}
 }
