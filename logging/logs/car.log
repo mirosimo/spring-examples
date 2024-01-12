@@ -1,0 +1,33 @@
+2024-01-11T16:58:05.714+01:00  INFO 20612 --- [main] m.logging.LoggingApplication             : Starting LoggingApplication using Java 17.0.7 with PID 20612 (D:\programovani\spring\project-examples\logging\target\classes started by kerim in D:\programovani\spring\project-examples\logging)
+2024-01-11T16:58:05.731+01:00  INFO 20612 --- [main] m.logging.LoggingApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-01-11T16:58:08.689+01:00  INFO 20612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-11T16:58:08.699+01:00  INFO 20612 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-01-11T16:58:08.701+01:00  INFO 20612 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-01-11T16:58:08.704+01:00  INFO 20612 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-01-11T16:58:08.732+01:00  INFO 20612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-11T16:58:08.733+01:00  INFO 20612 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-11T16:58:08.862+01:00  INFO 20612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-11T16:58:08.864+01:00  INFO 20612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3003 ms
+2024-01-11T16:58:09.681+01:00  INFO 20612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-11T16:58:09.700+01:00  INFO 20612 --- [main] m.logging.LoggingApplication             : Started LoggingApplication in 4.864 seconds (process running for 5.382)
+2024-01-11T16:58:21.559+01:00  INFO 20612 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-11T16:58:21.559+01:00  INFO 20612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-11T16:58:21.560+01:00  INFO 20612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-11T16:58:33.680+01:00 ERROR 20612 --- [http-nio-8080-exec-5] m.logging.sale.controller.CarController  : CarController - ERROR Message
+2024-01-11T16:59:30.522+01:00  INFO 12448 --- [main] m.logging.LoggingApplication             : Starting LoggingApplication using Java 17.0.7 with PID 12448 (D:\programovani\spring\project-examples\logging\target\classes started by kerim in D:\programovani\spring\project-examples\logging)
+2024-01-11T16:59:30.526+01:00  INFO 12448 --- [main] m.logging.LoggingApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-01-11T16:59:31.702+01:00  INFO 12448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-11T16:59:31.706+01:00  INFO 12448 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-01-11T16:59:31.707+01:00  INFO 12448 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-01-11T16:59:31.709+01:00  INFO 12448 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-01-11T16:59:31.721+01:00  INFO 12448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-11T16:59:31.722+01:00  INFO 12448 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-11T16:59:31.813+01:00  INFO 12448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-11T16:59:31.814+01:00  INFO 12448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1220 ms
+2024-01-11T16:59:32.288+01:00  INFO 12448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-11T16:59:32.303+01:00  INFO 12448 --- [main] m.logging.LoggingApplication             : Started LoggingApplication in 2.286 seconds (process running for 2.661)
+2024-01-11T16:59:36.177+01:00  INFO 12448 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-11T16:59:36.177+01:00  INFO 12448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-11T16:59:36.178+01:00  INFO 12448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-11T16:59:36.214+01:00  WARN 12448 --- [http-nio-8080-exec-1] m.logging.sale.controller.CarController  : CarController - WARN Message
+2024-01-11T16:59:36.215+01:00 ERROR 12448 --- [http-nio-8080-exec-1] m.logging.sale.controller.CarController  : CarController - ERROR Message
